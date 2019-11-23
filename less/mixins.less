@@ -1,1 +1,26 @@
 // Mixins Here
+.display-flex(@justify, @direction, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.btn-style(@b-color, @t-color, @f-size, @width, @padding-t-b, @padding-l-r, @t-align, @b-radius) {
+    background-color: @b-color;
+    color: @t-color;
+    font-size: @f-size;
+    width: @width;
+    padding: @padding-t-b @padding-l-r;
+    text-align: @t-align;
+    border-radius: @b-radius;
+
+    &:hover {
+        background-color: orange;
+        color: black;
+        box-shadow: 5px 5px rgb(180, 84, 28);
+        font-size: x-large;
+        cursor: pointer;
+    }
+
+}
